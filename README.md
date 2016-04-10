@@ -70,7 +70,7 @@ Eg: predicate
 #Streams and collectors:
 
 #Map/Filter/Reduce: For suppose in a list of persons, we want average of people whose age is more than 20.
-Map: Map the list<Person> to List<Integers>
+Map: Map the list of Persons to List of Integers
 Filter: it will returns the list<Integer> after filtering out the condition 20 using predicates.
 Reduce: it is more like SQl aggregate functions.
 
@@ -98,7 +98,20 @@ Peek(Consumer) lazy and it return the stream
 filter(Predicate) lazy
 
 #Mapping Operation:
-A mapper is modeled by function interface.
+A mapper is modeled by function interface. Map returns the stream
+<R> Stream<R> map(Function<T, R> mapper);
+
+#FlatMap:
+A flatmapper takes two arguments one is element of Type T and returns an element of type Stream<R>
+It is a stream of streams.Thus the stream of streams is flattened and become Flatmap
+
+#Reduction:
+More kind of aggregate functions in SQL like min,max,sum etc
+
+
+
+
+
 
 
 
