@@ -106,7 +106,15 @@ A flatmapper takes two arguments one is element of Type T and returns an element
 It is a stream of streams.Thus the stream of streams is flattened and become Flatmap
 
 #Reduction:
-More kind of aggregate functions in SQL like min,max,sum etc
+More kind of aggregate functions in SQL like min,max,sum etc.Reductions don't return any streams and they are terminal operations.
+
+The identity element is both the initial value of the reduction and the default result if there are no elements in the stream.
+
+##Available Reductions:
+max, min, Count
+
+##Boolean Reductions:
+allMatch, noneMatch and anyMatch
 
 
 
