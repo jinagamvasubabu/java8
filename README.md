@@ -74,6 +74,28 @@ Map: Map the list of Persons to List of Integers
 Filter: it will returns the list<Integer> after filtering out the condition 20 using predicates.
 Reduce: it is more like SQl aggregate functions.
 
+let's take an example:
+`//First scenario :
+		// I want persons average whose age is more than 20
+		List<Person> pList = Arrays.asList(new Person(26, "vasu"),new Person(30,"natraj"),new Person(26,"santhosh"),new Person(25,"srinu"));
+		
+		
+		//pList.parallelStream()
+		List<Person> updatedList = pList.stream().
+				filter(c -> c.getAge() > 25).
+				/*map(new Function<Person,Person>(){
+
+					@Override
+					public Person apply(Person t) {
+						return new Person(t);
+					}
+					
+				});*/
+				//map(p -> new Person(p));
+				map(Person::new).
+				//collect(Collectors.toList());
+				collect(Collectors.toCollection(ArrayList::new));`
+
 #Streams: 
 Technical answer is typed interface.
 It gives way to effeciently process large data or smaller ones.Streams doesn't hold any data.
@@ -115,7 +137,6 @@ max, min, Count
 
 ##Boolean Reductions:
 allMatch, noneMatch and anyMatch
-
 
 
 
