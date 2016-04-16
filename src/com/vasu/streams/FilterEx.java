@@ -11,7 +11,7 @@ public class FilterEx {
 		Predicate<String> p1 = p -> p.length() > 2; 
 		Predicate<String> p2 = Predicate.isEqual("two");
 		cList.stream().
-				filter(p1.and(p2)).
+				filter(p1.and(p2)). //can use or,negate
 				forEach(System.out::println);
 	}
 }
