@@ -113,6 +113,7 @@ used with streams to filter out the result, predicates here is much better to us
 		cList.stream().
 				filter(p1.and(p2)). //can use or,negate
 				forEach(System.out::println);`
+
 				
 #stream API:
 forEach(Consumer) not Lazy and does not return any stream
@@ -139,9 +140,22 @@ max, min, Count
 allMatch, noneMatch and anyMatch
 
 
+##collectors:
+It is another type of reduction and it is called as mutable reduction. why because instead of aggregating elements it will put in a container.
 
+`String persons = pList.stream().
+				filter(c->c.getAge() > 20).
+				//map(p -> p.getName()).
+				map(Person::getName).
+				collect(Collectors.joining(","));`
 
+###Collecting in a Map:
+For example if we want a map of all aged group persons in list (group by age).
+we can do easily by Collectors groupingby
 
+`Map<Integer, List<Person>> pMap = pList.stream().
+					filter(p -> p.getAge() > 20).
+					collect(Collectors.groupingBy(Person::getAge));`
 
 
 
