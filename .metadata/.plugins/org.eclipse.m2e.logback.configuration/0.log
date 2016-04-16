@@ -1,2 +1,15 @@
 2016-04-16 15:25:20,450 [Thread-13] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
 
+2016-04-16 15:39:17,266 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Spring_fundamentals:com.vasu.spring:0.0.1-SNAPSHOT @ /Users/mac/Documents/workspace/java8/com.vasu.spring/pom.xml.
+2016-04-16 15:39:18,650 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-16 15:39:18,657 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-16 15:39:18,660 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-16 15:39:18,670 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-16 15:39:23,110 [Worker-6] INFO  o.e.m.i.discovery.MavenDiscovery - No lifecyle mapping found at jar:file:/var/folders/17/9vzrtm313_v1_q50tdx6nhw40000gn/T/RemoteBundleDiscoveryStrategy2682233309800741277.tmp/org.eclipse.m2e.discovery.oss_catalog_1.6.jar_3271422614994039419.jar!/lifecycle%2Forg.eclipse.m2e.discovery.lifecyclemapping.m2e-egit.xml
+2016-04-16 15:39:23,110 [Worker-6] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2016-04-16 15:39:23,116 [Worker-6] INFO  o.e.m.i.discovery.MavenDiscovery - No lifecyle mapping found at jar:file:/var/folders/17/9vzrtm313_v1_q50tdx6nhw40000gn/T/RemoteBundleDiscoveryStrategy2682233309800741277.tmp/org.eclipse.m2e.discovery.oss_catalog_1.6.jar_3271422614994039419.jar!/lifecycle%2Forg.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive.xml
+2016-04-16 15:39:23,117 [Worker-6] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2016-04-16 15:39:23,276 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-16 15:39:23,281 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-16 15:39:23,284 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-16 15:39:23,286 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
