@@ -158,6 +158,102 @@ we can do easily by Collectors groupingby
 					collect(Collectors.groupingBy(Person::getAge));`
 
 
+#Date and Time API:
+
+###why do we need a new Date time API?
+Date API till java7: java.util.date and java.sql.date. 
+to create a new date object `Date d = new Date(2016,1,1); // 2016+1900
+		System.out.println(d.toString());
+		
+		
+		Calendar c = Calendar.getInstance();
+		c.set(2016, 00, 10, 0, 0, 0);
+		System.out.println(c.getTime());
+		
+		// add 7 days to c
+		c.add(Calendar.DAY_OF_MONTH, 7);
+		System.out.println(c.getTime());`
+###Datetime api in java7 is mutable: mutable !!!! yes. Date can be modified, but can be restricted with defensive copy!!!
+
+###New API in java8, package is java.time it completley replace the java.util.date and Calendar
+
+###Insant:
+Instant is a point on the time line
+`0 is janauary 1st 1970 at midnight GMT
+Instant.Min 1 billion years ago
+Instant.Max is Dec 31 of the year 1,000,000,000 //1  billion years
+Instant.now is the current instant
+`
+
+A instant object is mutable. no need to use defensive copy  for to protect it.
+###Duration: Duration is the amount of time between two instant
+`Instant start = Instant.now();
+		
+		for(Long i = 0L; i <1000000000L;){
+			i++;
+		}
+		
+		Instant end = Instant.now();
+		
+		Duration d = Duration.between(start, end);
+		System.out.println(d.getSeconds());`
+###Many cases were not covered: 
+using Instant we cannot create a particular date. for example i can not create birthdate 22-jun-1989
+
+so we need a Date replacer, yes. we need. It is called as LocalDate
+
+###LocalDate:
+LocalDate is same like as Date and period is like Duration but it is the duration between two localdates
+`LocalDate dob = LocalDate.of(1989, Month.JUNE, 22); // clear month representations
+		
+		//period
+		Period years = dob.until(LocalDate.now());
+		System.out.println("Vasu is:"+years.getYears()+" years old!!!");
+		
+		long months = dob.until(LocalDate.now(),ChronoUnit.MONTHS);
+		System.out.println("Vasu is:"+months+"months old!!!");`
+		
+		`//to check clearly in years,months,days
+		
+		Period p1 = Period.between(dob, LocalDate.now());
+		System.out.println("Vasu is"+p1.get(ChronoUnit.YEARS)+" years and "+p1.get(ChronoUnit.MONTHS)
+		+" months,"+p1.get(ChronoUnit.DAYS)+" Days old");`
+###DateAdjusters:
+It is used to add or subtract an amount of time to an instant or LocalDate
+`LocalDate now = LocalDate.now();
+		LocalDate nextSunday = now.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+		System.out.println("Next sunday is on:"+nextSunday);`
+		
+		`
+		LocalDate firstSundayInMonth = now.with(TemporalAdjusters.firstInMonth(DayOfWeek.SUNDAY));
+		System.out.println(firstSundayInMonth);`
+		
+##Localtime: it is a time of day
+`	LocalTime l = LocalTime.of(23,53);
+		LocalTime l2 = l.plusHours(7);
+		
+		System.out.println(l2);`
+#ZonedTime: 
+`
+		ZonedDateTime IndiaMeeting = ZonedDateTime.of(
+									LocalDate.of(2016, Month.APRIL, 29),
+									LocalTime.of(15, 30),
+									ZoneId.of("Asia/Kolkata"));
+		
+		ZonedDateTime UkMeeting = IndiaMeeting.withZoneSameInstant(ZoneId.of("Europe/London"));
+		System.out.println(DateTimeFormatter.RFC_1123_DATE_TIME.format(IndiaMeeting));
+		System.out.println(DateTimeFormatter.RFC_1123_DATE_TIME.format(UkMeeting));`
+		
+#How to format a Date:
+After seeing the date from the earlier program. i thought of formatting the dates. Java8 
+The new date API proposes a new formatter: DateTimeFormatter, it proposes a set of predefined formatters, available as constants.
+DateTimeFormatter will be used in this case.
+
+		
+
+
+
+
 
 
 
