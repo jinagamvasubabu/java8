@@ -6,9 +6,9 @@ but Why ?
 
 ###Iterators:
 External Iterators: i was writing this from 5 years. 
-`for(int i=0; i< numbers.size();i++){
-    sysout(i); // please bear with me.. i am Lazy :(
-}`
+` for(int i=0; i< numbers.size();i++){`
+    `sysout(i); // please bear with me.. i am Lazy :(`
+`}`
 
 ###using lambda's:
 `numbers.forEach(new Consumer<Integer>() {
