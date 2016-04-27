@@ -41,4 +41,13 @@ Hey!!! but i got little from above giant text:
 * Its more expressive - Declarative way - I want to read code as a story . Not like a puzzle - Venkat subrmaniam
 
 
+###Lambda: 
+A lambda is a lines of code which can be passed around to execute.While going to lambda's lets talk about Functional Interfaces, then come back to Lambda's.
+Lambda's can be used to represent Functional Interface!!!
+
+###Functional Interfaces (SAM): (Single Abstract Method interfaces)
+A Functional Interface is an interface which is annotated as `FunctonalInterface` but its optional, but if we write it then we can't add more than one abstract method but with defaults and static methods 
+Note: Static methods cannot be overrided, even though you declared in interface.
+
+
 
