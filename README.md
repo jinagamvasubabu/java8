@@ -249,6 +249,33 @@ After seeing the date from the earlier program. i thought of formatting the date
 The new date API proposes a new formatter: DateTimeFormatter, it proposes a set of predefined formatters, available as constants.
 DateTimeFormatter will be used in this case.
 
+##Nashorn JS Engine:
+Module outline : REPL: Java in JS
+Script Engine: Java in JS
+
+
+* REPL = READ,EVALUATE,PRINT,LOOP
+* It looks like a shell, ie with a prompt
+* And enables one to type in JS interactively
+* jjs is the REPL executable (located in $JAVA_HOME/bin)
+* one create Java objects and interact with them. 
+`var s = new java.lang.String("HELLO")`
+* you can apply any of your String functions like toUpperCase(),toUpperCase(),toString()
+
+###remeber in MAC OS jjs doesn't work directly. it is called as jrunsript. u can put alias as jjs add it to profile. if you are familiar with jjs only.
+
+##Running Javascript in Java application:
+* its not new, it was there from java6.
+* Many Languages are available called as groovy or JRuby
+* To Execute one needs a ScriptEngine by its name
+
+
+
+
+
+
+
+
 		
 
 
