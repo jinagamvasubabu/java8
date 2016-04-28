@@ -62,7 +62,36 @@ its a new package java.util.function with a rich set of functional interfaces Di
 * Predicate - returns boolean . it has test function
 * Function/Bifunction - Function takes an object as a prameter returns as objects as parameter, returns object Bi - accepts two types
 
-###Foreach iterator
+###Method References: 
+I can say its the simplest way to write lambda's.
+
+###forEach loop:
+We have a forEach loop which is newely introduced in Java 1.8
+
+###Predicates:
+perdicate is from the functional interfaces toolbox and it is used with fiters
+
+
+##Streams:
+Technical answer is typed interface. It gives way to effeciently process large data or smaller ones.Streams doesn't hold any data.
+
+###Effeciently?
+In Parallel, to leaverage the computing power of multicore cpu's. Pipelined, to avoid unnecessary intermediatary computations.
+
+###Filter: used with streams to filter out the result, predicates here is much better to use.
+
+###Reduction:
+More kind of aggregate functions in SQL like min,max,sum etc.Reductions don't return any streams and they are terminal operations.
+
+The identity element is both the initial value of the reduction and the default result if there are no elements in the stream.
+
+
+###lets take an example of map filter reduce !!!
+
+###FlatMap: 
+A flatmapper takes two arguments one is element of Type T and returns an element of type Stream. Thus the stream of streams is flattened and become Flatmap
+
+
 
 
 
