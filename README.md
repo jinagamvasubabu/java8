@@ -45,9 +45,26 @@ Hey!!! but i got little from above giant text:
 A lambda is a lines of code which can be passed around to execute.While going to lambda's lets talk about Functional Interfaces, then come back to Lambda's.
 Lambda's can be used to represent Functional Interface!!!
 
+###is lambda's an Object ?
+hmmm.. its little complicated to answer. but no , ask me why ? but for jvm its very easy to work with lambda's because everytime no need to create a new instance and it is a performance boon though. But i can say lambda is an object without identity :)
 ###Functional Interfaces (SAM): (Single Abstract Method interfaces)
 A Functional Interface is an interface which is annotated as `FunctonalInterface` but its optional, but if we write it then we can't add more than one abstract method but with defaults and static methods 
 Note: Static methods cannot be overrided, even though you declared in interface.
+
+###Anonymous classes:
+An Anonymous class is a local class with out a name. One of the most elegant things about anonymous classes is that they allow you to define a one-shot class exactly where it is needed. In addition, anonymous classes have a succinct syntax that reduces clutter in your code.
+Ex: Comparator,Runnable etc
+
+###Functional Interfaces toolbox:
+its a new package java.util.function with a rich set of functional interfaces Divided into four categories
+* supplier/BiSupplier - It has get function to always supply
+* Consumer/BiConsumer - accept SAM. Sysout is a perfect example. Bi means takes two arguments
+* Predicate - returns boolean . it has test function
+* Function/Bifunction - Function takes an object as a prameter returns as objects as parameter, returns object Bi - accepts two types
+
+###Foreach iterator
+
+
 
 
 
