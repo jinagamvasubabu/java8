@@ -93,7 +93,100 @@ A flatmapper takes two arguments one is element of Type T and returns an element
 
 
 
+#Java Date time API:
+###Instant:
+Instant is a point on the time line
+* 0 is janauary 1st 1970 at midnight GMT
+* Instant.Min 1 billion years ago
+* Instant.Max is Dec 31 of the year 1,000,000,000 //1  billion years
+* Instant.now is the current instant
+* A instant object is mutable. no need to use defensive copy  for to protect it.
 
+###Duration: Duration is the amount of time between two instant
+  Instant start = Instant.now();
+		
+  		for(Long i = 0L; i <1000000000L;){
+  			i++;
+  		}
+		
+		Instant end = Instant.now();
+		
+		Duration d = Duration.between(start, end);
+		System.out.println(d.getSeconds());
+		
+###Many cases were not covered: 
+using Instant we cannot create a particular date. for example i can not create birthdate 22-jun-1989
+
+so we need a Date replacer, yes. we need. It is called as LocalDate
+
+###LocalDate:
+LocalDate is same like as Date and period is like Duration but it is like duration between two localdates
+  LocalDate dob = LocalDate.of(1989, Month.JUNE, 22); // clear month representations
+		
+		//period
+		Period years = dob.until(LocalDate.now());
+		System.out.println("Vasu is:"+years.getYears()+" years old!!!");
+		
+		long months = dob.until(LocalDate.now(),ChronoUnit.MONTHS);
+		System.out.println("Vasu is:"+months+"months old!!!");`
+		
+		`//to check clearly in years,months,days
+		
+		Period p1 = Period.between(dob, LocalDate.now());
+		System.out.println("Vasu is"+p1.get(ChronoUnit.YEARS)+" years and "+p1.get(ChronoUnit.MONTHS)
+		+" months,"+p1.get(ChronoUnit.DAYS)+" Days old");
+		
+###DateAdjusters:
+It is used to add or subtract an amount of time to an instant or LocalDate
+LocalDate now = LocalDate.now();
+		LocalDate nextSunday = now.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+		System.out.println("Next sunday is on:"+nextSunday);
+		
+		
+		LocalDate firstSundayInMonth = now.with(TemporalAdjusters.firstInMonth(DayOfWeek.SUNDAY));
+		System.out.println(firstSundayInMonth);
+		
+##Localtime: it is a time of day
+	LocalTime l = LocalTime.of(23,53);
+		LocalTime l2 = l.plusHours(7);
+		
+		System.out.println(l2);
+		
+#ZonedTime: 
+
+		ZonedDateTime IndiaMeeting = ZonedDateTime.of(
+									LocalDate.of(2016, Month.APRIL, 29),
+									LocalTime.of(15, 30),
+									ZoneId.of("Asia/Kolkata"));
+		
+		ZonedDateTime UkMeeting = IndiaMeeting.withZoneSameInstant(ZoneId.of("Europe/London"));
+		System.out.println(DateTimeFormatter.RFC_1123_DATE_TIME.format(IndiaMeeting));
+		System.out.println(DateTimeFormatter.RFC_1123_DATE_TIME.format(UkMeeting));
+		
+#How to format a Date:
+After seeing the date from the earlier program. i thought of formatting the dates. Java8 
+The new date API proposes a new formatter: DateTimeFormatter, it proposes a set of predefined formatters, available as constants.
+DateTimeFormatter will be used in this case.
+
+##Nashorn JS Engine:
+Module outline : REPL: Java in JS
+Script Engine: Java in JS
+
+
+* REPL = READ,EVALUATE,PRINT,LOOP
+* It looks like a shell, ie with a prompt
+* And enables one to type in JS interactively
+* jjs is the REPL executable (located in $JAVA_HOME/bin)
+* one create Java objects and interact with them. 
+`var s = new java.lang.String("HELLO")`
+* you can apply any of your String functions like toUpperCase(),toUpperCase(),toString()
+
+###remeber in MAC OS jjs doesn't work directly. it is called as jrunsript. u can put alias as jjs add it to profile. if you are familiar with jjs only.
+
+##Running Javascript in Java application:
+* its not new, it was there from java6.
+* Many Languages are available called as groovy or JRuby
+* To Execute one needs a ScriptEngine by its name
 
 
 
