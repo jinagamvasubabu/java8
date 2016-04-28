@@ -121,7 +121,7 @@ so we need a Date replacer, yes. we need. It is called as LocalDate
 
 ###LocalDate:
 LocalDate is same like as Date and period is like Duration but it is like duration between two localdates
-  LocalDate dob = LocalDate.of(1989, Month.JUNE, 22); // clear month representations
+  		LocalDate dob = LocalDate.of(1989, Month.JUNE, 22); // clear month representations
 		
 		//period
 		Period years = dob.until(LocalDate.now());
@@ -138,7 +138,7 @@ LocalDate is same like as Date and period is like Duration but it is like durati
 		
 ###DateAdjusters:
 It is used to add or subtract an amount of time to an instant or LocalDate
-LocalDate now = LocalDate.now();
+		LocalDate now = LocalDate.now();
 		LocalDate nextSunday = now.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
 		System.out.println("Next sunday is on:"+nextSunday);
 		
@@ -147,7 +147,7 @@ LocalDate now = LocalDate.now();
 		System.out.println(firstSundayInMonth);
 		
 ##Localtime: it is a time of day
-	LocalTime l = LocalTime.of(23,53);
+		LocalTime l = LocalTime.of(23,53);
 		LocalTime l2 = l.plusHours(7);
 		
 		System.out.println(l2);
