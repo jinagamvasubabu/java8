@@ -36,8 +36,6 @@ public class Lambda1 {
 		for(Integer num:intList){
 			System.out.println(num);
 		}
-		
-		
 		Thread th = new Thread(() -> System.out.println("In child Thread"));
 		th.start();
 		

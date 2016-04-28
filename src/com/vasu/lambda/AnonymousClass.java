@@ -11,7 +11,6 @@ import java.util.List;
 public class AnonymousClass {
 
 	public static void main(String[] args) {
-		
 		FileFilter filter = new FileFilter() {
 			
 			@Override
@@ -53,7 +52,6 @@ public class AnonymousClass {
 		th.start();
 		
 		System.out.println("In Main thread");
-		
-	}
 
+	}
 }
