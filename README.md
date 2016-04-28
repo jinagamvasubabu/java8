@@ -189,4 +189,5 @@ Script Engine: Java in JS
 * To Execute one needs a ScriptEngine by its name
 
 
-
+##We can run linux commands using Nashorn shell
+[Stackoverlow answer](http://stackoverflow.com/questions/36403242/java-linux-shell-application)
